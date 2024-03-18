@@ -6,3 +6,5 @@ node_modules
 # esbuild-visualizer
 meta.json
 stats.html
+
+.DS_Store
