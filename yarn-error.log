@@ -1,0 +1,131 @@
+Arguments: 
+  /Users/shu/Library/Application Support/fnm/node-versions/v20.2.0/installation/bin/node /Users/shu/Library/pnpm/global/5/node_modules/yarn/bin/yarn.js
+
+PATH: 
+  /Users/shu/Library/Caches/fnm_multishells/25680_1710762998986/bin:/Users/shu/.bun/bin:/Users/shu/Library/pnpm:/opt/homebrew/bin:/Users/shu/Library/Caches/fnm_multishells/19552_1710758860596/bin:/Users/shu/.bun/bin:/Users/shu/Library/pnpm:/opt/homebrew/bin:/usr/local/bin:/opt/homebrew/opt/python@3.9/libexec/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Users/shu/.cargo/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.2.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: EEXIST: file already exists, mkdir '/Users/shu/Documents/git/next-ts-plugin-vscode/node_modules/esbuild-visualizer/node_modules'
+
+npm manifest: 
+  {
+    "name": "next-ts-plugin-vscode",
+    "displayName": "Always-on Next.js TypeScript Plugin",
+    "version": "0.0.2",
+    "description": "Always-on Next.js TypeScript Plugin in VSCode",
+    "publisher": "shuding",
+    "private": true,
+    "preview": false,
+    "author": {
+      "name": "shuding",
+      "email": "g@shud.in",
+      "url": "https://github.com/shuding"
+    },
+    "license": "SEE LICENSE IN LICENSE",
+    "homepage": "https://github.com/shuding/next-ts-plugin-vscode",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/shuding/next-ts-plugin-vscode"
+    },
+    "bugs": {
+      "url": "https://github.com/shuding/next-ts-plugin-vscode/issues",
+      "email": "g@shud.in"
+    },
+    "keywords": [
+      "next.js"
+    ],
+    "categories": [
+      "Other"
+    ],
+    "main": "./out/src/extension.js",
+    "icon": "assets/logo.png",
+    "engines": {
+      "vscode": "^1.45.0"
+    },
+    "badges": [],
+    "activationEvents": [],
+    "contributes": {
+      "typescriptServerPlugins": [
+        {
+          "name": "next"
+        }
+      ]
+    },
+    "eslintConfig": {
+      "extends": "@yutengjing/eslint-config-typescript",
+      "ignorePatterns": [
+        "test-workspace"
+      ]
+    },
+    "lint-staged": {
+      "*.{ts,json,md}": [
+        "eslint --fix",
+        "prettier --write"
+      ]
+    },
+    "simple-git-hooks": {
+      "pre-commit": "pnpx lint-staged"
+    },
+    "scripts": {
+      "vscode:prepublish": "pnpm esbuild:base --minify",
+      "preinstall": "pnpx only-allow pnpm",
+      "postinstall": "stale-dep -u",
+      "prepare": "simple-git-hooks",
+      "clean": "pnpx rimraf -rf ./out",
+      "esbuild:base": "stale-dep && tsx scripts/esbuild.ts",
+      "esbuild:watch": "pnpm esbuild:base --sourcemap --watch",
+      "esbuild:analyze": "pnpm esbuild:base --minify --metafile --analyze && esbuild-visualizer --metadata ./meta.json --open",
+      "compile:test": "pnpm clean && tsc -b ./test/tsconfig.json",
+      "lint": "eslint src --ext ts",
+      "test": "stale-dep && pnpm compile:test && node ./out/test/runTests.js",
+      "package": "vsce package --no-dependencies",
+      "release": "pnpx @yutengjing/release",
+      "publish:vs-marketplace": "vsce publish --no-dependencies",
+      "publish:open-vsx": "ovsx publish --no-dependencies"
+    },
+    "devDependencies": {
+      "@types/glob": "^8.1.0",
+      "@types/mocha": "^10.0.6",
+      "@types/node": "^20.11.20",
+      "@types/vscode": "^1.45.0",
+      "@vscode/test-electron": "^2.3.9",
+      "@vscode/vsce": "^2.24.0",
+      "@yutengjing/eslint-config-typescript": "^0.5.2",
+      "@yutengjing/prettier-config": "^1.1.2",
+      "@yutengjing/release": "^0.2.0",
+      "@yutengjing/tsconfig-node": "^0.0.5",
+      "esbuild": "^0.20.1",
+      "esbuild-visualizer": "^0.6.0",
+      "eslint": "^8.57.0",
+      "glob": "^10.3.10",
+      "lint-staged": "^15.2.2",
+      "mocha": "^10.3.0",
+      "ovsx": "^0.8.3",
+      "prettier": "^3.2.5",
+      "rimraf": "^5.0.5",
+      "simple-git-hooks": "^2.9.0",
+      "stale-dep": "^0.7.0",
+      "tsx": "^4.7.1",
+      "typescript": "^5.3.3"
+    },
+    "dependencies": {
+      "next": "*",
+      "react": "*",
+      "react-dom": "*"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

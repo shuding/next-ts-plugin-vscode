@@ -4,6 +4,24 @@ scripts
 assets
 !assets/logo.png
 
+node_modules/**/caniuse-lite
+node_modules/**/*.md
+node_modules/**/.github/**/*
+node_modules/**/*.d.ts
+node_modules/**/*.js.map
+node_modules/@next/**/*.node
+node_modules/@swc/helpers/esm
+node_modules/next/**/*.wasm
+node_modules/@vercel/og
+node_modules/next/dist/compiled/**/*.production.js
+node_modules/next/dist/compiled/**/*.production.min.js
+node_modules/next/dist/esm
+node_modules/next/dist/compiled/react-experimental
+node_modules/next/dist/compiled/react-dom-experimental
+node_modules/next/dist/compiled/react-server-dom-webpack-experimental
+node_modules/next/dist/compiled/react-server-dom-turbopack
+node_modules/next/dist/compiled/react-server-dom-turbopack-experimental
+
 # output
 out
 !out/src/extension.js
