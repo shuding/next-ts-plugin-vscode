@@ -1,7 +1,7 @@
 {
   "name": "next-ts-plugin-vscode",
   "displayName": "Always-on Next.js TypeScript Plugin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Always-on Next.js TypeScript Plugin in VSCode",
   "publisher": "shuding",
   "private": true,
@@ -59,9 +59,9 @@
     "compile:test": "pnpm clean && tsc -b ./test/tsconfig.json",
     "lint": "eslint src --ext ts",
     "test": "stale-dep && pnpm compile:test && node ./out/test/runTests.js",
-    "package": "vsce package --no-dependencies",
+    "package": "vsce package --yarn",
     "release": "pnpx @yutengjing/release",
-    "publish:vs-marketplace": "vsce publish --no-dependencies",
+    "publish:vs-marketplace": "vsce publish --yarn",
     "publish:open-vsx": "ovsx publish --no-dependencies"
   },
   "devDependencies": {
