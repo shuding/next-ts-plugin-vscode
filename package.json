@@ -1,7 +1,7 @@
 {
   "name": "next-ts-plugin-vscode",
   "displayName": "Always-on Next.js TypeScript Plugin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Always-on Next.js TypeScript Plugin in VSCode",
   "publisher": "shuding",
   "private": true,
@@ -21,12 +21,8 @@
     "url": "https://github.com/shuding/next-ts-plugin-vscode/issues",
     "email": "g@shud.in"
   },
-  "keywords": [
-    "next.js"
-  ],
-  "categories": [
-    "Other"
-  ],
+  "keywords": ["next.js"],
+  "categories": ["Other"],
   "main": "./out/src/extension.js",
   "icon": "assets/logo.png",
   "engines": {
@@ -43,15 +39,10 @@
   },
   "eslintConfig": {
     "extends": "@yutengjing/eslint-config-typescript",
-    "ignorePatterns": [
-      "test-workspace"
-    ]
+    "ignorePatterns": ["test-workspace"]
   },
   "lint-staged": {
-    "*.{ts,json,md}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "*.{ts,json,md}": ["eslint --fix", "prettier --write"]
   },
   "simple-git-hooks": {
     "pre-commit": "pnpx lint-staged"
@@ -99,6 +90,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "next": "*"
+    "next": "canary"
   }
 }
